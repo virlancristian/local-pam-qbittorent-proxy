@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - PAM qBittorrent Proxy</title>
+</head>
+<body>
+    <form action="#" th:action="@{/}" th:object="${credentials}" method="post">
+        <input type="text" th:field="*{username}"/>
+        <input type="text" th:field="*{password}"/>
+        <input type="submit" value="Submit"/>
+    </form>
+    <p th:if="${errorMessage}" th:text="${errorMessage}"></p>
+</body>
+</html>
